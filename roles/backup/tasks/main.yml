@@ -1,0 +1,9 @@
+---
+# tasks file for backup
+- name: Transfer the script
+  copy: src=roles/backup/files/backup.sh dest=/home/{{ ansible_ssh_user }}/backup.sh mode=0755
+  sudo: yes
+
+- name: Execute the script
+  command: sh /home/{{ ansible_ssh_user }}/backup.sh "{{ mysql_root_password }}"
+  sudo: yes
