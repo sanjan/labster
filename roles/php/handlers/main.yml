@@ -1,0 +1,5 @@
+---
+# handlers file for php
+- name: restart php
+  service: name=php5-fpm state=restarted
+  sudo: yes

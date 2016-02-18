@@ -1,0 +1,10 @@
+---
+# handlers file for nginx
+- name: restart nginx
+  service: name=nginx state=restarted
+  sudo: yes
+
+# handlers file for php5-fpm
+- name: restart php5-fpm
+  service: name=php5-fpm state=restarted
+  sudo: yes

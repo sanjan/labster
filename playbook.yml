@@ -1,0 +1,7 @@
+- hosts: aws
+
+  roles:
+    - nginx
+    - php
+    - mysql
+    - wordpress
