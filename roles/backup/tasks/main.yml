@@ -6,3 +6,4 @@
 
 - name: Execute the script
   command: /home/{{ ansible_ssh_user }}/backup.sh root "{{ mysql_root_password }}"
+  sudo: yes

@@ -12,13 +12,13 @@
 Task 1: Deployment process
 
 ```sh
-$ ansible-playbook deploy.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=<PASSWORD>"
+$ ansible-playbook deploy.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
 ```
 
 Task 2: Backup process
 
 ```sh
-$ ansible-playbook backup.yml -i ~/ansible/hosts -u ubuntu --private-key=~/.ssh/<PRIVATEKEYFILE> -e "mysql_root_password=<PASSWORD>"
+$ ansible-playbook backup.yml -i ~/ansible/hosts -u ubuntu --private-key=~/.ssh/<PRIVATEKEYFILE> -e "mysql_root_password=labster"
 ```
 
 License

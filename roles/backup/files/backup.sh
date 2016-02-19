@@ -2,7 +2,8 @@
 
 DBUSER="$1"
 DBPASSWORD="$2"
-homedir="$(env | grep HOME | cut -d= -f2)"
+#homedir="$(env | grep HOME | cut -d= -f2)"
+homedir=
 mysql_backupdir=$homedir/backup/mysql
 nginx_backupdir=$homedir/backup/nginx
 wordpress_backupdir=$homedir/backup/wordpress
