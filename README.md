@@ -18,7 +18,7 @@ $ ansible-playbook deploy.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVAT
 Task 2: Backup process
 
 ```sh
-$ ansible-playbook backup.yml -i ~/ansible/hosts -u ubuntu --private-key=~/.ssh/<PRIVATEKEYFILE> -e "mysql_root_password=labster"
+$ ansible-playbook backup.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
 ```
 
 ### Directory Structure
