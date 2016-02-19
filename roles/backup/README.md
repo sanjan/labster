@@ -1,38 +1,53 @@
-Role Name
-========
+Task 2: Backup
+==============
 
-A brief description of the role goes here.
+Create backup rotation.
 
 Requirements
 ------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Backup MySql Databases and configuration for NginX and CMS applications
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+For MySql credentials the script uses a couple of variables
+- mysql username
+- mysql password
 
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
+Workflow of the playbook
 -------------------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+This playbook will copy and run a Bash script that will perform the backup tasks
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+
+Playbook tasks
+--------------
+
+```sh
+
+Step 1:
+The script checks terminates if couple of conditons are not met
+- 1. number of supplied arguments < 2
+- 2. current load average of the system > 2.00
+
+Step 2:
+Create backup directories
+
+Step 3: 
+For every user database in mysql create an sql dump file compress it
+keep only the 7 most recent files for each database
+
+Step 4: 
+Backup the Nginx config file and compress it
+keep only the 7 most recent files
+
+Step 5: backup the Wordpress  
+Backup the Wordpress config file and compress it
+keep only the 7 most recent files
+
+```
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT License
