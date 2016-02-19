@@ -12,14 +12,16 @@
 Task 1: Deployment process
 
 ```sh
-$ ansible-playbook deploy.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
+$ ansible-playbook deploy.yml -i hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
 ```
 
 Task 2: Backup process
 
 ```sh
-$ ansible-playbook backup.yml -i ~/ansible/hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
+$ ansible-playbook backup.yml -i hosts -u ubuntu --private-key=<PRIVATEKEYFILE> -e "mysql_root_password=labster"
 ```
+
+Documentation for backup process available at: https://github.com/sanjan/labster/tree/master/roles/backup
 
 ### Directory Structure
 
