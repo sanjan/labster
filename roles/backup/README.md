@@ -14,13 +14,13 @@ For MySql credentials the script uses a couple of variables
 - mysql username
 - mysql password
 
-Workflow of the playbook
+Backup playbook
 -------------------------
 
 This playbook will copy and run a Bash script that will perform the backup tasks
 
 
-Playbook tasks
+Backup Script Workflow
 --------------
 
 ```sh
@@ -35,7 +35,7 @@ Create backup directories
 
 Step 3: 
 For every user database in mysql create an sql dump file compress it
-keep only the 7 most recent files for each database
+keep only the 7 most recent databae dumps for each database
 
 Step 4: 
 Backup the Nginx config file and compress it
