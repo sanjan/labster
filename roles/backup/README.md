@@ -41,7 +41,7 @@ Step 4:
 Backup the Nginx config file and compress it
 keep only the 7 most recent files
 
-Step 5: backup the Wordpress  
+Step 5: 
 Backup the Wordpress config file and compress it
 keep only the 7 most recent files
 
